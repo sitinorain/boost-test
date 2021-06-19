@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class SplashViewController: UIViewController, SplashViewPresenterToView {
-    var presenter: SplashViewToPresenter?
+protocol SplashViewControllerDelegate: NSObjectProtocol {
+    func splashViewControllerProceedNext(_ splashViewController: SplashViewController)
+}
+
+class SplashViewController: BaseViewController {
+    
+    var viewDelegate: SplashViewControllerDelegate?
+    var viewModel: SplashViewModel!
     
     static func fromStoryboard() -> SplashViewController {
         let viewController = R.storyboard.splash.instantiateInitialViewController()!
@@ -17,13 +25,8 @@ class SplashViewController: UIViewController, SplashViewPresenterToView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        configureViews() 
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +34,7 @@ class SplashViewController: UIViewController, SplashViewPresenterToView {
         perform(#selector(proceedToNextScreen), with: nil, afterDelay: 2.0)
     }
     
-    func configureViews() {
+    override func configureViews() {
         
     }
 
@@ -44,8 +47,8 @@ class SplashViewController: UIViewController, SplashViewPresenterToView {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @objc func proceedToNextScreen() {
-        presenter?.viewShouldProceedToNextScreen()
+    
+    @objc private func proceedToNextScreen() {
+        viewModel.navigateToListingView(from: self)
     }
 }

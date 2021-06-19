@@ -14,11 +14,6 @@
 		A1379207267DD43D00A515DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1379206267DD43D00A515DC /* Assets.xcassets */; };
 		A137920A267DD43D00A515DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1379208267DD43D00A515DC /* LaunchScreen.storyboard */; };
 		A1379213267DD9AD00A515DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379212267DD9AD00A515DC /* R.generated.swift */; };
-		A1379223267DE95700A515DC /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379218267DE95700A515DC /* SplashViewRouter.swift */; };
-		A1379224267DE95700A515DC /* SplashViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379219267DE95700A515DC /* SplashViewInteractor.swift */; };
-		A1379225267DE95700A515DC /* SplashViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137921A267DE95700A515DC /* SplashViewPresenter.swift */; };
-		A1379226267DE95700A515DC /* SplashViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137921B267DE95700A515DC /* SplashViewProtocols.swift */; };
-		A1379227267DE95700A515DC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137921D267DE95700A515DC /* SplashViewController.swift */; };
 		A1379228267DE95700A515DC /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A137921E267DE95700A515DC /* Splash.storyboard */; };
 		A1379229267DE95700A515DC /* SplashWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379220267DE95700A515DC /* SplashWireframe.swift */; };
 		A137922A267DE95700A515DC /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379222267DE95700A515DC /* SplashConfigurator.swift */; };
@@ -26,6 +21,11 @@
 		A137922F267DEB4800A515DC /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137922D267DEB4800A515DC /* Navigation.swift */; };
 		A1379231267DEE7700A515DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379230267DEE7700A515DC /* ViewController.swift */; };
 		A1379234267DEF8500A515DC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A1379233267DEF8400A515DC /* data.json */; };
+		A1379238267DF27200A515DC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379236267DF27200A515DC /* SplashViewModel.swift */; };
+		A1379239267DF27200A515DC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379237267DF27200A515DC /* SplashViewController.swift */; };
+		A137923E267DF34600A515DC /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137923B267DF34600A515DC /* ScrollViewController.swift */; };
+		A137923F267DF34600A515DC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137923C267DF34600A515DC /* BaseViewController.swift */; };
+		A1379240267DF34600A515DC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137923D267DF34600A515DC /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +39,6 @@
 		A1379209267DD43D00A515DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A137920B267DD43D00A515DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1379212267DD9AD00A515DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		A1379218267DE95700A515DC /* SplashViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
-		A1379219267DE95700A515DC /* SplashViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewInteractor.swift; sourceTree = "<group>"; };
-		A137921A267DE95700A515DC /* SplashViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewPresenter.swift; sourceTree = "<group>"; };
-		A137921B267DE95700A515DC /* SplashViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewProtocols.swift; sourceTree = "<group>"; };
-		A137921D267DE95700A515DC /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A137921E267DE95700A515DC /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		A1379220267DE95700A515DC /* SplashWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashWireframe.swift; sourceTree = "<group>"; };
 		A1379222267DE95700A515DC /* SplashConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
@@ -51,6 +46,11 @@
 		A137922D267DEB4800A515DC /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A1379230267DEE7700A515DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1379233267DEF8400A515DC /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A1379236267DF27200A515DC /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		A1379237267DF27200A515DC /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A137923B267DF34600A515DC /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		A137923C267DF34600A515DC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A137923D267DF34600A515DC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D02FF3DCEE9E3567CEA883FE /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,8 +121,10 @@
 		A1379215267DE94800A515DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A137923A267DF32F00A515DC /* BaseUIKit */,
 				A137922B267DEB4800A515DC /* Assembly */,
 				A1379216267DE95700A515DC /* Splash */,
+				A1379235267DF0E300A515DC /* Listing */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -130,48 +132,29 @@
 		A1379216267DE95700A515DC /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				A1379217267DE95700A515DC /* Scenes */,
-				A137921F267DE95700A515DC /* Wireframe */,
-				A1379221267DE95700A515DC /* Configurator */,
+				A1379217267DE95700A515DC /* View */,
+				A1379221267DE95700A515DC /* Coordinator */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		A1379217267DE95700A515DC /* Scenes */ = {
+		A1379217267DE95700A515DC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A1379218267DE95700A515DC /* SplashViewRouter.swift */,
-				A1379219267DE95700A515DC /* SplashViewInteractor.swift */,
-				A137921A267DE95700A515DC /* SplashViewPresenter.swift */,
-				A137921B267DE95700A515DC /* SplashViewProtocols.swift */,
-				A137921C267DE95700A515DC /* Views */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		A137921C267DE95700A515DC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A137921D267DE95700A515DC /* SplashViewController.swift */,
 				A137921E267DE95700A515DC /* Splash.storyboard */,
+				A1379237267DF27200A515DC /* SplashViewController.swift */,
+				A1379236267DF27200A515DC /* SplashViewModel.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		A137921F267DE95700A515DC /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				A1379220267DE95700A515DC /* SplashWireframe.swift */,
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		A1379221267DE95700A515DC /* Configurator */ = {
+		A1379221267DE95700A515DC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				A1379222267DE95700A515DC /* SplashConfigurator.swift */,
+				A1379220267DE95700A515DC /* SplashWireframe.swift */,
 			);
-			path = Configurator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		A137922B267DEB4800A515DC /* Assembly */ = {
@@ -190,6 +173,23 @@
 			);
 			name = Resources;
 			path = contact/Resources;
+			sourceTree = "<group>";
+		};
+		A1379235267DF0E300A515DC /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		A137923A267DF32F00A515DC /* BaseUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A137923C267DF34600A515DC /* BaseViewController.swift */,
+				A137923B267DF34600A515DC /* ScrollViewController.swift */,
+				A137923D267DF34600A515DC /* TableViewController.swift */,
+			);
+			path = BaseUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,19 +328,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1379224267DE95700A515DC /* SplashViewInteractor.swift in Sources */,
 				A137922E267DEB4800A515DC /* Assembly.swift in Sources */,
 				A137922A267DE95700A515DC /* SplashConfigurator.swift in Sources */,
+				A1379240267DF34600A515DC /* TableViewController.swift in Sources */,
 				A13791FE267DD43A00A515DC /* AppDelegate.swift in Sources */,
+				A1379238267DF27200A515DC /* SplashViewModel.swift in Sources */,
 				A1379229267DE95700A515DC /* SplashWireframe.swift in Sources */,
-				A1379227267DE95700A515DC /* SplashViewController.swift in Sources */,
-				A1379223267DE95700A515DC /* SplashViewRouter.swift in Sources */,
+				A137923F267DF34600A515DC /* BaseViewController.swift in Sources */,
 				A1379200267DD43A00A515DC /* SceneDelegate.swift in Sources */,
 				A1379231267DEE7700A515DC /* ViewController.swift in Sources */,
+				A137923E267DF34600A515DC /* ScrollViewController.swift in Sources */,
 				A137922F267DEB4800A515DC /* Navigation.swift in Sources */,
-				A1379225267DE95700A515DC /* SplashViewPresenter.swift in Sources */,
 				A1379213267DD9AD00A515DC /* R.generated.swift in Sources */,
-				A1379226267DE95700A515DC /* SplashViewProtocols.swift in Sources */,
+				A1379239267DF27200A515DC /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
