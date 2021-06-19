@@ -15,6 +15,8 @@ public class Navigation {
     init() {
         configureDefaultViews()
         SplashConfigurator.shared.delegate = self
+        ListingConfigurator.shared.delegate = self
+        DetailsConfigurator.shared.delegate = self
     }
     
     private func configureDefaultViews() {

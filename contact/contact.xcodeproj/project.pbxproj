@@ -38,6 +38,11 @@
 		A1379259267E0CD800A515DC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379258267E0CD800A515DC /* Error.swift */; };
 		A137925D267E408000A515DC /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137925B267E408000A515DC /* ListingTableViewCell.swift */; };
 		A137925E267E408000A515DC /* ListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137925C267E408000A515DC /* ListingTableViewCell.xib */; };
+		A1379272267E60D500A515DC /* DetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137926D267E60D500A515DC /* DetailsConfigurator.swift */; };
+		A1379273267E60D500A515DC /* DetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137926E267E60D500A515DC /* DetailsWireframe.swift */; };
+		A1379274267E60D500A515DC /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379270267E60D500A515DC /* DetailsViewModel.swift */; };
+		A1379275267E60D500A515DC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379271267E60D500A515DC /* DetailsViewController.swift */; };
+		A1379277267E620500A515DC /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1379276267E620500A515DC /* Details.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,11 @@
 		A1379258267E0CD800A515DC /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		A137925B267E408000A515DC /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		A137925C267E408000A515DC /* ListingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingTableViewCell.xib; sourceTree = "<group>"; };
+		A137926D267E60D500A515DC /* DetailsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsConfigurator.swift; sourceTree = "<group>"; };
+		A137926E267E60D500A515DC /* DetailsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsWireframe.swift; sourceTree = "<group>"; };
+		A1379270267E60D500A515DC /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		A1379271267E60D500A515DC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A1379276267E620500A515DC /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		D02FF3DCEE9E3567CEA883FE /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +162,7 @@
 				A137922B267DEB4800A515DC /* Assembly */,
 				A1379216267DE95700A515DC /* Splash */,
 				A1379235267DF0E300A515DC /* Listing */,
+				A137925F267E5E6F00A515DC /* Details */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -276,6 +287,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A137925F267E5E6F00A515DC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A137926C267E60D500A515DC /* Coordinator */,
+				A137926F267E60D500A515DC /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		A137926C267E60D500A515DC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A137926D267E60D500A515DC /* DetailsConfigurator.swift */,
+				A137926E267E60D500A515DC /* DetailsWireframe.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A137926F267E60D500A515DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1379276267E620500A515DC /* Details.storyboard */,
+				A1379271267E60D500A515DC /* DetailsViewController.swift */,
+				A1379270267E60D500A515DC /* DetailsViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +382,7 @@
 				A1379234267DEF8500A515DC /* data.json in Resources */,
 				A1379228267DE95700A515DC /* Splash.storyboard in Resources */,
 				A137924C267E01FE00A515DC /* Listing.storyboard in Resources */,
+				A1379277267E620500A515DC /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +456,7 @@
 			files = (
 				A137922E267DEB4800A515DC /* Assembly.swift in Sources */,
 				A1379253267E073700A515DC /* Contact.swift in Sources */,
+				A1379275267E60D500A515DC /* DetailsViewController.swift in Sources */,
 				A1379247267E015200A515DC /* ListingViewModel.swift in Sources */,
 				A137922A267DE95700A515DC /* SplashConfigurator.swift in Sources */,
 				A1379240267DF34600A515DC /* TableViewController.swift in Sources */,
@@ -431,10 +472,13 @@
 				A1379248267E015200A515DC /* ListingViewController.swift in Sources */,
 				A1379259267E0CD800A515DC /* Error.swift in Sources */,
 				A1379231267DEE7700A515DC /* ViewController.swift in Sources */,
+				A1379274267E60D500A515DC /* DetailsViewModel.swift in Sources */,
 				A137923E267DF34600A515DC /* ScrollViewController.swift in Sources */,
 				A137922F267DEB4800A515DC /* Navigation.swift in Sources */,
 				A1379249267E015200A515DC /* ListingWireframe.swift in Sources */,
 				A1379213267DD9AD00A515DC /* R.generated.swift in Sources */,
+				A1379272267E60D500A515DC /* DetailsConfigurator.swift in Sources */,
+				A1379273267E60D500A515DC /* DetailsWireframe.swift in Sources */,
 				A1379239267DF27200A515DC /* SplashViewController.swift in Sources */,
 				A137924F267E039C00A515DC /* UINavigationController+Extension.swift in Sources */,
 			);

@@ -83,7 +83,7 @@ class ListingViewController: TableViewController {
     }
     
     @objc private func addButtonOnSelected(_ sender: UIBarButtonItem) {
-        
+        viewModel.navigateToDetailsView(from: self)
     }
 
     /*

@@ -56,4 +56,9 @@ class ListingViewModel: NSObject {
             }
         }
     }
+    
+    func navigateToDetailsView(from: UIViewController) {
+        guard let fromViewController = from as? ListingViewController else { return }
+        ListingConfigurator.shared.delegate?.navigateToDetailsViewFromListing(fromViewController)
+    }
 }
