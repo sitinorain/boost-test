@@ -6,19 +6,15 @@
 //
 
 import Foundation
+import RealmSwift
+import RxRealm
 import RxSwift
 import RxCocoa
 
 class ListingViewModel: NSObject {
     private let contactService: ContactService
     private let disposeBag = DisposeBag()
-    private var _totalPages = 0
-    private let page: BehaviorRelay<Int> = BehaviorRelay(value: 1)
     let contacts: BehaviorRelay<[Contact]> = BehaviorRelay(value: [])
-    
-    var totalPages: Int {
-        return _totalPages
-    }
     
     init(contactService: ContactService) {
         self.contactService = contactService
@@ -27,33 +23,33 @@ class ListingViewModel: NSObject {
     }
     
     private func setupObserver() {
-        page.asObservable()
+        let realm = try! Realm()
+        let collection = realm.objects(Contact.self)
+        
+        Observable.changeset(from: collection)
             .subscribe(onNext: {
-                [weak self] page in
-                self?.loadContactList(isRefresh: page == 1)
-              })
+                [weak self] contacts, changes in
+                if changes == nil, contacts.isEmpty {
+                    self?.loadInitialData()
+                } else {
+                    self?.contacts.accept(Array(contacts))
+                }
+            })
             .disposed(by: disposeBag)
     }
     
-    private func loadContactList(isRefresh: Bool) {
+    private func loadInitialData() {
         contactService.getContacts { response in
             switch response {
             case .success(let value):
-                let newValue = isRefresh ? value : self.contacts.value + value
-                self.contacts.accept(newValue)
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(value)
+                }
             case .failure(let error):
                 print("contactService.getContacts, error: \(error)")
-                self.contacts.accept([])
+                //TO DO - specific error handling
             }
         }
-    }
-    
-    func loadInitialData() {
-        loadContactList(isRefresh: true)
-    }
-    
-    func viewDidReachEndOfPage() {
-        let newPage = page.value+1
-        page.accept(newPage)
     }
 }

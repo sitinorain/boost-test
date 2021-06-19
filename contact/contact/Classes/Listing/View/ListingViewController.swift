@@ -27,7 +27,6 @@ class ListingViewController: TableViewController {
 
         // Do any additional setup after loading the view.
         setupObserver()
-        viewModel.loadInitialData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,12 +59,6 @@ class ListingViewController: TableViewController {
                     .rx
                     .items(cellIdentifier: cell.reuseIdentifier,
                            cellType: ListingTableViewCell.self)) { row, contact, cell in
-//                let imagePath = movie.posterPath != nil ? movie.posterPath : movie.backdropPath
-//                let imageType = movie.posterPath != nil ? ImageType.poster : ImageType.backdrop
-//                let imageUrl = ConfigurationManager.imageURLForPath(imagePath, type: imageType, size: .thumbnail)
-//                let title = movie.title
-//                let popularity = (movie.popularity ?? 0.0) > 0 ? "Popularity: \(movie.popularity ?? 0.0)" : nil
-//                cell.refreshViews(imageUrl: imageUrl, title: title, details: popularity)
                 cell.refreshViews(firstName: contact.firstName, lastName: contact.lastName)
             }
             .disposed(by: disposeBag)
