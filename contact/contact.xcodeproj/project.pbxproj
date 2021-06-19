@@ -30,6 +30,8 @@
 		A1379248267E015200A515DC /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379243267E015200A515DC /* ListingViewController.swift */; };
 		A1379249267E015200A515DC /* ListingWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379245267E015200A515DC /* ListingWireframe.swift */; };
 		A137924A267E015200A515DC /* ListingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379246267E015200A515DC /* ListingConfigurator.swift */; };
+		A137924C267E01FE00A515DC /* Listing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A137924B267E01FE00A515DC /* Listing.storyboard */; };
+		A137924F267E039C00A515DC /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137924E267E039C00A515DC /* UINavigationController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		A1379243267E015200A515DC /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		A1379245267E015200A515DC /* ListingWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingWireframe.swift; sourceTree = "<group>"; };
 		A1379246267E015200A515DC /* ListingConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingConfigurator.swift; sourceTree = "<group>"; };
+		A137924B267E01FE00A515DC /* Listing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Listing.storyboard; sourceTree = "<group>"; };
+		A137924E267E039C00A515DC /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		D02FF3DCEE9E3567CEA883FE /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +133,7 @@
 		A1379215267DE94800A515DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A137924D267E039C00A515DC /* Extentions */,
 				A137923A267DF32F00A515DC /* BaseUIKit */,
 				A137922B267DEB4800A515DC /* Assembly */,
 				A1379216267DE95700A515DC /* Splash */,
@@ -205,6 +210,7 @@
 		A1379241267E015200A515DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A137924B267E01FE00A515DC /* Listing.storyboard */,
 				A1379243267E015200A515DC /* ListingViewController.swift */,
 				A1379242267E015200A515DC /* ListingViewModel.swift */,
 			);
@@ -218,6 +224,14 @@
 				A1379246267E015200A515DC /* ListingConfigurator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A137924D267E039C00A515DC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				A137924E267E039C00A515DC /* UINavigationController+Extension.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,7 @@
 				A1379205267DD43A00A515DC /* Main.storyboard in Resources */,
 				A1379234267DEF8500A515DC /* data.json in Resources */,
 				A1379228267DE95700A515DC /* Splash.storyboard in Resources */,
+				A137924C267E01FE00A515DC /* Listing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +388,7 @@
 				A1379249267E015200A515DC /* ListingWireframe.swift in Sources */,
 				A1379213267DD9AD00A515DC /* R.generated.swift in Sources */,
 				A1379239267DF27200A515DC /* SplashViewController.swift in Sources */,
+				A137924F267E039C00A515DC /* UINavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

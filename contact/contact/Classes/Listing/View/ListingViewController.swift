@@ -1,18 +1,20 @@
 //
-//  SplashViewController.swift
+//  ListingViewController.swift
 //  contact
 //
 //  Created by Siti Norain Ishak on 19/06/2021.
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class SplashViewController: BaseViewController {
+class ListingViewController: TableViewController {
     
-    var viewModel: SplashViewModel!
+    var viewModel: ListingViewModel!
     
-    static func fromStoryboard() -> SplashViewController {
-        let viewController = R.storyboard.splash.instantiateInitialViewController()!
+    static func fromStoryboard() -> ListingViewController {
+        let viewController = R.storyboard.listing.instantiateInitialViewController()!
         return viewController
     }
 
@@ -24,11 +26,10 @@ class SplashViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        perform(#selector(proceedToNextScreen), with: nil, afterDelay: 2.0)
     }
     
     override func configureViews() {
-        view.backgroundColor = R.color.themeColor()
+        
     }
 
     /*
@@ -40,8 +41,4 @@ class SplashViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @objc private func proceedToNextScreen() {
-        viewModel.navigateToListingView(from: self)
-    }
 }

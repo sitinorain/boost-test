@@ -20,9 +20,3 @@ public class Navigation {
         return SplashConfigurator.shared.createSplashScene()
     }
 }
-
-extension Navigation: SplashWireframe {
-    public func navigateToListingViewFromSplash(_ splashViewController: UIViewController) {
-        
-    }
-}
