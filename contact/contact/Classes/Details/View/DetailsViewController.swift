@@ -1,18 +1,18 @@
 //
-//  SplashViewController.swift
+//  DetailsViewController.swift
 //  contact
 //
-//  Created by Siti Norain Ishak on 19/06/2021.
+//  Created by Siti Norain Ishak on 20/06/2021.
 //
 
 import UIKit
 
-class SplashViewController: BaseViewController {
+class DetailsViewController: ScrollViewController {
     
-    var viewModel: SplashViewModel!
+    var viewModel: DetailsViewModel!
     
-    static func fromStoryboard() -> SplashViewController {
-        let viewController = R.storyboard.splash.instantiateInitialViewController()!
+    static func fromStoryboard() -> DetailsViewController {
+        let viewController = R.storyboard.details.instantiateInitialViewController()!
         return viewController
     }
 
@@ -22,13 +22,17 @@ class SplashViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        perform(#selector(proceedToNextScreen), with: nil, afterDelay: 1.0)
     }
     
     override func configureViews() {
-        view.backgroundColor = R.color.themeColor()
+        
     }
 
     /*
@@ -40,8 +44,4 @@ class SplashViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @objc private func proceedToNextScreen() {
-        viewModel.navigateToListingView(from: self)
-    }
 }
