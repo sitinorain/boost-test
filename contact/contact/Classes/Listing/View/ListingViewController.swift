@@ -62,7 +62,24 @@ class ListingViewController: TableViewController {
                 cell.refreshViews(firstName: contact.firstName, lastName: contact.lastName)
             }
             .disposed(by: disposeBag)
-
+        
+        refreshControl
+            .rx
+            .controlEvent(.valueChanged)
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.loadInitialData()
+            }, onCompleted: nil, onDisposed: nil)
+            .disposed(by: disposeBag)
+        
+        refreshControl
+            .rx
+            .controlEvent(.valueChanged)
+            .map { _ in self.refreshControl.isRefreshing }
+            .filter { $0 == true }
+            .subscribe { [weak self] _ in
+                self?.refreshControl.endRefreshing()
+            }
+            .disposed(by: disposeBag)
     }
     
     @objc private func addButtonOnSelected(_ sender: UIBarButtonItem) {

@@ -38,11 +38,15 @@ class ListingViewModel: NSObject {
             .disposed(by: disposeBag)
     }
     
-    private func loadInitialData() {
+    func loadInitialData() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        
         contactService.getContacts { response in
             switch response {
             case .success(let value):
-                let realm = try! Realm()
                 try! realm.write {
                     realm.add(value)
                 }
