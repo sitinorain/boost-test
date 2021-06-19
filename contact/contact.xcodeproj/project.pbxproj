@@ -32,6 +32,7 @@
 		A137924A267E015200A515DC /* ListingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379246267E015200A515DC /* ListingConfigurator.swift */; };
 		A137924C267E01FE00A515DC /* Listing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A137924B267E01FE00A515DC /* Listing.storyboard */; };
 		A137924F267E039C00A515DC /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137924E267E039C00A515DC /* UINavigationController+Extension.swift */; };
+		A1379253267E073700A515DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379252267E073700A515DC /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		A1379246267E015200A515DC /* ListingConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingConfigurator.swift; sourceTree = "<group>"; };
 		A137924B267E01FE00A515DC /* Listing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Listing.storyboard; sourceTree = "<group>"; };
 		A137924E267E039C00A515DC /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		A1379252267E073700A515DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		D02FF3DCEE9E3567CEA883FE /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,8 @@
 		A1379215267DE94800A515DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A1379251267E06C900A515DC /* Model */,
+				A1379250267E06C200A515DC /* Services */,
 				A137924D267E039C00A515DC /* Extentions */,
 				A137923A267DF32F00A515DC /* BaseUIKit */,
 				A137922B267DEB4800A515DC /* Assembly */,
@@ -232,6 +236,21 @@
 				A137924E267E039C00A515DC /* UINavigationController+Extension.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		A1379250267E06C200A515DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A1379251267E06C900A515DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1379252267E073700A515DC /* Contact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A137922E267DEB4800A515DC /* Assembly.swift in Sources */,
+				A1379253267E073700A515DC /* Contact.swift in Sources */,
 				A1379247267E015200A515DC /* ListingViewModel.swift in Sources */,
 				A137922A267DE95700A515DC /* SplashConfigurator.swift in Sources */,
 				A1379240267DF34600A515DC /* TableViewController.swift in Sources */,
