@@ -7,21 +7,24 @@
 
 import Foundation
 
-public protocol GetContactsProtocol: AnyObject {
-    func didSuccessGetContacts(response: [Contact]?)
-    func didFailedGetContacts(error: Error?)
-}
-
 public class ContactService: ReadJsonFromFile {
-    public weak var contactListDelegate: GetContactsProtocol?
-    
-    public func getContacts() {
+    public func getContacts(completionHandler: @escaping (Result<[Contact], Error>) -> Void) {
         do {
             let responseData = self.readJson(type(of: self), fromFile: "data")
-            let response = try JSONDecoder().decode(ContactsResponse.self, from: responseData ?? Data())
-            contactListDelegate?.didSuccessGetContacts(response: response.contacts)
+            let response = try JSONDecoder().decode([Contact].self, from: responseData ?? Data())
+            if !response.isEmpty {
+                DispatchQueue.main.async {
+                    completionHandler(.success(response))
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completionHandler(.failure(DescriptiveError("No available data")))
+                }
+            }
         } catch {
-            contactListDelegate?.didFailedGetContacts(error: DescriptiveError("serialization error"))
+            DispatchQueue.main.async {
+                completionHandler(.failure(DescriptiveError("Serialization Error")))
+            }
         }
     }
 }

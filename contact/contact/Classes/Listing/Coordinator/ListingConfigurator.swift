@@ -12,8 +12,9 @@ public class ListingConfigurator {
     public weak var delegate: ListingWireframe?
 
     public func createListingScene() -> UIViewController {
+        let contactService = ContactService()
         let viewController = ListingViewController.fromStoryboard()
-        viewController.viewModel = ListingViewModel()
+        viewController.viewModel = ListingViewModel(contactService: contactService)
         return viewController
     }
 }

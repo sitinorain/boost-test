@@ -7,10 +7,6 @@
 
 import Foundation
 
-public struct ContactsResponse: Codable {
-    public let contacts: [Contact]?
-}
-
 public struct Contact: Codable {
     let id: String
     let firstName: String

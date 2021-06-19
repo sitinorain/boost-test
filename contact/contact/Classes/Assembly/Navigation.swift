@@ -13,7 +13,15 @@ public class Navigation {
     public static let shared = Navigation()
     
     init() {
+        configureDefaultViews()
         SplashConfigurator.shared.delegate = self
+    }
+    
+    private func configureDefaultViews() {
+        let attributes = [NSAttributedString.Key.foregroundColor: R.color.fontColor(), NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0, weight: .bold)]
+        UINavigationBar.appearance().titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+        UINavigationBar.appearance().barTintColor = R.color.navigationBarColor()
+        UINavigationBar.appearance().tintColor = R.color.themeColor()
     }
     
     public func buildSplashViewModule() -> UIViewController {

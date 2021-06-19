@@ -24,7 +24,7 @@ class SplashViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        perform(#selector(proceedToNextScreen), with: nil, afterDelay: 2.0)
+        perform(#selector(proceedToNextScreen), with: nil, afterDelay: 1.0)
     }
     
     override func configureViews() {

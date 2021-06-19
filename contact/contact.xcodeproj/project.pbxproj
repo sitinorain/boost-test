@@ -36,6 +36,8 @@
 		A1379255267E098400A515DC /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379254267E098400A515DC /* ContactService.swift */; };
 		A1379257267E0B7500A515DC /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379256267E0B7500A515DC /* Data+Extension.swift */; };
 		A1379259267E0CD800A515DC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379258267E0CD800A515DC /* Error.swift */; };
+		A137925D267E408000A515DC /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137925B267E408000A515DC /* ListingTableViewCell.swift */; };
+		A137925E267E408000A515DC /* ListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137925C267E408000A515DC /* ListingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		A1379254267E098400A515DC /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		A1379256267E0B7500A515DC /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		A1379258267E0CD800A515DC /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		A137925B267E408000A515DC /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
+		A137925C267E408000A515DC /* ListingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingTableViewCell.xib; sourceTree = "<group>"; };
 		D02FF3DCEE9E3567CEA883FE /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +227,7 @@
 				A137924B267E01FE00A515DC /* Listing.storyboard */,
 				A1379243267E015200A515DC /* ListingViewController.swift */,
 				A1379242267E015200A515DC /* ListingViewModel.swift */,
+				A137925A267E406A00A515DC /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +265,15 @@
 				A1379252267E073700A515DC /* Contact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A137925A267E406A00A515DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A137925B267E408000A515DC /* ListingTableViewCell.swift */,
+				A137925C267E408000A515DC /* ListingTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +339,7 @@
 				A137920A267DD43D00A515DC /* LaunchScreen.storyboard in Resources */,
 				A1379207267DD43D00A515DC /* Assets.xcassets in Resources */,
 				A1379205267DD43A00A515DC /* Main.storyboard in Resources */,
+				A137925E267E408000A515DC /* ListingTableViewCell.xib in Resources */,
 				A1379234267DEF8500A515DC /* data.json in Resources */,
 				A1379228267DE95700A515DC /* Splash.storyboard in Resources */,
 				A137924C267E01FE00A515DC /* Listing.storyboard in Resources */,
@@ -412,6 +427,7 @@
 				A1379229267DE95700A515DC /* SplashWireframe.swift in Sources */,
 				A137923F267DF34600A515DC /* BaseViewController.swift in Sources */,
 				A1379200267DD43A00A515DC /* SceneDelegate.swift in Sources */,
+				A137925D267E408000A515DC /* ListingTableViewCell.swift in Sources */,
 				A1379248267E015200A515DC /* ListingViewController.swift in Sources */,
 				A1379259267E0CD800A515DC /* Error.swift in Sources */,
 				A1379231267DEE7700A515DC /* ViewController.swift in Sources */,
