@@ -9,13 +9,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol SplashViewControllerDelegate: NSObjectProtocol {
-    func splashViewControllerProceedNext(_ splashViewController: SplashViewController)
-}
-
 class SplashViewController: BaseViewController {
     
-    var viewDelegate: SplashViewControllerDelegate?
     var viewModel: SplashViewModel!
     
     static func fromStoryboard() -> SplashViewController {

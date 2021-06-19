@@ -26,6 +26,10 @@
 		A137923E267DF34600A515DC /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137923B267DF34600A515DC /* ScrollViewController.swift */; };
 		A137923F267DF34600A515DC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137923C267DF34600A515DC /* BaseViewController.swift */; };
 		A1379240267DF34600A515DC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137923D267DF34600A515DC /* TableViewController.swift */; };
+		A1379247267E015200A515DC /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379242267E015200A515DC /* ListingViewModel.swift */; };
+		A1379248267E015200A515DC /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379243267E015200A515DC /* ListingViewController.swift */; };
+		A1379249267E015200A515DC /* ListingWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379245267E015200A515DC /* ListingWireframe.swift */; };
+		A137924A267E015200A515DC /* ListingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1379246267E015200A515DC /* ListingConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		A137923B267DF34600A515DC /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		A137923C267DF34600A515DC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A137923D267DF34600A515DC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A1379242267E015200A515DC /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
+		A1379243267E015200A515DC /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		A1379245267E015200A515DC /* ListingWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingWireframe.swift; sourceTree = "<group>"; };
+		A1379246267E015200A515DC /* ListingConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingConfigurator.swift; sourceTree = "<group>"; };
 		D02FF3DCEE9E3567CEA883FE /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,8 +140,8 @@
 		A1379216267DE95700A515DC /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				A1379217267DE95700A515DC /* View */,
 				A1379221267DE95700A515DC /* Coordinator */,
+				A1379217267DE95700A515DC /* View */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -178,6 +186,8 @@
 		A1379235267DF0E300A515DC /* Listing */ = {
 			isa = PBXGroup;
 			children = (
+				A1379244267E015200A515DC /* Coordinator */,
+				A1379241267E015200A515DC /* View */,
 			);
 			path = Listing;
 			sourceTree = "<group>";
@@ -190,6 +200,24 @@
 				A137923D267DF34600A515DC /* TableViewController.swift */,
 			);
 			path = BaseUIKit;
+			sourceTree = "<group>";
+		};
+		A1379241267E015200A515DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1379243267E015200A515DC /* ListingViewController.swift */,
+				A1379242267E015200A515DC /* ListingViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1379244267E015200A515DC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A1379245267E015200A515DC /* ListingWireframe.swift */,
+				A1379246267E015200A515DC /* ListingConfigurator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,16 +357,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A137922E267DEB4800A515DC /* Assembly.swift in Sources */,
+				A1379247267E015200A515DC /* ListingViewModel.swift in Sources */,
 				A137922A267DE95700A515DC /* SplashConfigurator.swift in Sources */,
 				A1379240267DF34600A515DC /* TableViewController.swift in Sources */,
 				A13791FE267DD43A00A515DC /* AppDelegate.swift in Sources */,
+				A137924A267E015200A515DC /* ListingConfigurator.swift in Sources */,
 				A1379238267DF27200A515DC /* SplashViewModel.swift in Sources */,
 				A1379229267DE95700A515DC /* SplashWireframe.swift in Sources */,
 				A137923F267DF34600A515DC /* BaseViewController.swift in Sources */,
 				A1379200267DD43A00A515DC /* SceneDelegate.swift in Sources */,
+				A1379248267E015200A515DC /* ListingViewController.swift in Sources */,
 				A1379231267DEE7700A515DC /* ViewController.swift in Sources */,
 				A137923E267DF34600A515DC /* ScrollViewController.swift in Sources */,
 				A137922F267DEB4800A515DC /* Navigation.swift in Sources */,
+				A1379249267E015200A515DC /* ListingWireframe.swift in Sources */,
 				A1379213267DD9AD00A515DC /* R.generated.swift in Sources */,
 				A1379239267DF27200A515DC /* SplashViewController.swift in Sources */,
 			);
