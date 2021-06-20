@@ -10,9 +10,16 @@ import UIKit
 
 class DetailsViewModel: NSObject {
     private let contactService: ContactService
+    private let contact: Contact?
     
-    init(contactService: ContactService) {
+    init(contact: Contact? = nil, contactService: ContactService) {
+        self.contact = contact
         self.contactService = contactService
         super.init()
+    }
+    
+    func navigateBack(from: UIViewController) {
+        guard let fromViewController = from as? DetailsViewController else { return }
+        fromViewController.navigationController?.popViewController(animated: true)
     }
 }
