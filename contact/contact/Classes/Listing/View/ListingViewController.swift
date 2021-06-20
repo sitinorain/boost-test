@@ -63,6 +63,17 @@ class ListingViewController: TableViewController {
             }
             .disposed(by: disposeBag)
         
+        tableView
+            .rx
+            .modelSelected(Contact.self)
+            .subscribe(onNext: { [weak self] contact in
+                if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow {
+                    self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+                }
+                self?.didSelectedContact(contact)
+            })
+            .disposed(by: disposeBag)
+        
         refreshControl
             .rx
             .controlEvent(.valueChanged)
@@ -84,6 +95,10 @@ class ListingViewController: TableViewController {
     
     @objc private func addButtonOnSelected(_ sender: UIBarButtonItem) {
         viewModel.navigateToDetailsView(from: self)
+    }
+    
+    private func didSelectedContact(_ contact: Contact) {
+        viewModel.navigateToDetailsView(from: self, withSelectedContact: contact)
     }
 
     /*

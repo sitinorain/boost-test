@@ -57,8 +57,8 @@ class ListingViewModel: NSObject {
         }
     }
     
-    func navigateToDetailsView(from: UIViewController) {
+    func navigateToDetailsView(from: UIViewController, withSelectedContact contact: Contact? = nil) {
         guard let fromViewController = from as? ListingViewController else { return }
-        ListingConfigurator.shared.delegate?.navigateToDetailsViewFromListing(fromViewController)
+        ListingConfigurator.shared.delegate?.navigateToDetailsViewFromListing(fromViewController, withSelectedContact: contact)
     }
 }

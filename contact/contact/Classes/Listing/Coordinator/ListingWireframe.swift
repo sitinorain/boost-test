@@ -8,11 +8,11 @@
 import UIKit
 
 public protocol ListingWireframe: AnyObject {
-    func navigateToDetailsViewFromListing(_ listingViewController: UIViewController)
+    func navigateToDetailsViewFromListing(_ listingViewController: UIViewController, withSelectedContact contact: Contact?)
 }
 
 extension Navigation: ListingWireframe {
-    public func navigateToDetailsViewFromListing(_ listingViewController: UIViewController) {
+    public func navigateToDetailsViewFromListing(_ listingViewController: UIViewController, withSelectedContact contact: Contact?) {
         guard let fromViewController = listingViewController as? ListingViewController else { return }
         let viewController = DetailsConfigurator.shared.createDetailsScene()
         fromViewController.navigationController?.pushViewController(viewController, animated: true)
