@@ -3,7 +3,7 @@
 ### To do
 Please run "pod install" command and open the project from ".xcworkspace"
 
-### Design Consideration
+### Design Consideration (MVVM + Rx)
 The code consist 5 main elements:
 1. View - view controller & views
 2. ViewModel - view absract representation, manage user interaction and handle services & business logic
