@@ -49,4 +49,19 @@ public class ContactService: ReadJsonFromFile {
             print(DescriptiveError("Serialization Error"))
         }
     }
+    
+    public func updateExistingContact(id: String, firstName: String, lastName: String, email: String?, phone: String?) {
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "id == %@", id)
+        let existingRecords = realm.objects(Contact.self).filter(predicate)
+        if let contact = existingRecords.first {
+            print("update existing contact record")
+            try! realm.write {
+                contact.firstName = firstName
+                contact.lastName = lastName
+                contact.email = email
+                contact.phone = phone
+            }
+        }
+    }
 }

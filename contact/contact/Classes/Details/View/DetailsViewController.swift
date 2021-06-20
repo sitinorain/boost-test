@@ -46,7 +46,16 @@ class DetailsViewController: ScrollViewController {
         saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonOnSelected(_:)))
         navigationItem.rightBarButtonItem = saveButton
         
+        refreshViews()
         setupTextChangeHandling()
+    }
+    
+    private func refreshViews() {
+        guard let contact = viewModel.contact else { return }
+        firstNameTextField.text = contact.firstName
+        lastNameTextField.text = contact.lastName
+        emailTextField.text = contact.email
+        phoneTextField.text = contact.phone
     }
     
     @objc private func cancelButtonOnSelected(_ sender: UIBarButtonItem) {
@@ -56,7 +65,11 @@ class DetailsViewController: ScrollViewController {
     @objc private func saveButtonOnSelected(_ sender: UIBarButtonItem) {
         guard let firstName = firstNameTextField.text else { return }
         guard let lastName = lastNameTextField.text else { return }
-        viewModel.saveNewContact(firstName: firstName, lastName: lastName, email: emailTextField.text, phone: phoneTextField.text)
+        if let contact = viewModel.contact {
+            viewModel.saveExistingContact(id: contact.id, firstName: firstName, lastName: lastName, email: emailTextField.text, phone: phoneTextField.text)
+        } else {
+            viewModel.saveNewContact(firstName: firstName, lastName: lastName, email: emailTextField.text, phone: phoneTextField.text)
+        }
         viewModel.navigateBack(from: self)
     }
 
