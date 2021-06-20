@@ -1,0 +1,34 @@
+[
+  {
+    "id": "5c8a80f52dfee238898d64cf",
+    "firstName": "Phoebe",
+    "lastName": "Monroe",
+    "email": "phoebemonroe@furnafix.com",
+    "phone": "(903) 553-3410"
+  },
+  {
+    "id": "5c8a80f575270ddb54a18f86",
+    "firstName": "Lidia",
+    "lastName": "Wilkins",
+    "email": "lidiawilkins@furnafix.com",
+    "phone": "(997) 482-3866"
+  },
+  {
+    "id": "5c8a80f57a27f272ab4272f9",
+    "firstName": "Gertrude",
+    "lastName": "Mccormick",
+    "email": "gertrudemccormick@furnafix.com",
+  },
+  {
+    "id": "5c8a80f5e2ad4c1edc5cc5d9",
+    "firstName": "Maxine",
+    "lastName": "Brady",
+    "email": "maxinebrady@furnafix.com",
+    "phone": "(919) 469-2468"
+  },
+  {
+    "id": "5c8a80f597cdf9c2fc4f8466",
+    "firstName": "Hancock",
+    "lastName": "Foreman"
+  }
+]
