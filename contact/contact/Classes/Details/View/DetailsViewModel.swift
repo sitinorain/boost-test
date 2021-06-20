@@ -10,7 +10,7 @@ import UIKit
 
 class DetailsViewModel: NSObject {
     private let contactService: ContactService
-    private let contact: Contact?
+    let contact: Contact?
     
     init(contact: Contact? = nil, contactService: ContactService) {
         self.contact = contact
@@ -25,5 +25,9 @@ class DetailsViewModel: NSObject {
     
     func saveNewContact(firstName: String, lastName: String, email: String?, phone: String?) {
         contactService.createNewContact(firstName: firstName, lastName: lastName, email: email, phone: phone)
+    }
+    
+    func saveExistingContact(id: String, firstName: String, lastName: String, email: String?, phone: String?) {
+        contactService.updateExistingContact(id: id, firstName: firstName, lastName: lastName, email: email, phone: phone)
     }
 }

@@ -14,7 +14,7 @@ public protocol ListingWireframe: AnyObject {
 extension Navigation: ListingWireframe {
     public func navigateToDetailsViewFromListing(_ listingViewController: UIViewController, withSelectedContact contact: Contact?) {
         guard let fromViewController = listingViewController as? ListingViewController else { return }
-        let viewController = DetailsConfigurator.shared.createDetailsScene()
+        let viewController = DetailsConfigurator.shared.createDetailsScene(withSelectedContact: contact)
         fromViewController.navigationController?.pushViewController(viewController, animated: true)
     }
 }

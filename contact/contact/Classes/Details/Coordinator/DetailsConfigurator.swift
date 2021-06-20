@@ -11,10 +11,10 @@ public class DetailsConfigurator {
     public static var shared = DetailsConfigurator()
     public weak var delegate: DetailsWireframe?
 
-    public func createDetailsScene() -> UIViewController {
+    public func createDetailsScene(withSelectedContact contact: Contact? = nil) -> UIViewController {
         let contactService = ContactService()
         let viewController = DetailsViewController.fromStoryboard()
-        viewController.viewModel = DetailsViewModel(contactService: contactService)
+        viewController.viewModel = DetailsViewModel(contact: contact, contactService: contactService)
         return viewController
     }
 }
