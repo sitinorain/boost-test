@@ -83,7 +83,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="gPK-ZI-uzG"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -122,7 +122,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="Cah-h1-MV7"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -162,7 +162,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="Drh-6k-ftT"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -201,7 +201,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="9gz-7H-V5X"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>

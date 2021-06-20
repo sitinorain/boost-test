@@ -46,6 +46,11 @@ class DetailsViewController: ScrollViewController {
         saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonOnSelected(_:)))
         navigationItem.rightBarButtonItem = saveButton
         
+        firstNameTextField.setNextResponder(lastNameTextField, disposeBag: disposeBag)
+        lastNameTextField.setNextResponder(emailTextField, disposeBag: disposeBag)
+        emailTextField.setNextResponder(phoneTextField, disposeBag: disposeBag)
+        phoneTextField.resignWhenFinished(disposeBag)
+        
         refreshViews()
         setupTextChangeHandling()
     }
