@@ -11,5 +11,15 @@ target 'contact' do
   pod 'RxCocoa', '6.1.0'
   pod 'RxRealm'
   pod 'IQKeyboardManagerSwift'
+  
+  target 'ListingTests' do
+      # Pods for testing
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'RxNimble'
+    pod 'RxTest'
+    pod 'RxBlocking'
+  end
 
 end
