@@ -22,4 +22,8 @@ class DetailsViewModel: NSObject {
         guard let fromViewController = from as? DetailsViewController else { return }
         fromViewController.navigationController?.popViewController(animated: true)
     }
+    
+    func saveNewContact(firstName: String, lastName: String, email: String?, phone: String?) {
+        contactService.createNewContact(firstName: firstName, lastName: lastName, email: email, phone: phone)
+    }
 }
