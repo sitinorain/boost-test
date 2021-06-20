@@ -35,7 +35,7 @@ class BaseViewController: UIViewController {
     }
     
     func configureViews() {
-        
+        view.backgroundColor = R.color.backgroundColor()
     }
     
     @objc private func viewDidTapped(_ sender: UITapGestureRecognizer) {
