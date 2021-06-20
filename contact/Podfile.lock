@@ -1,5 +1,7 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.6)
+  - Nimble (9.2.0)
+  - Quick (4.0.0)
   - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -8,9 +10,19 @@ PODS:
   - Realm/Headers (10.7.4)
   - RealmSwift (10.7.4):
     - Realm (= 10.7.4)
+  - RxBlocking (6.1.0):
+    - RxSwift (= 6.1.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
+  - RxNimble (5.1.1):
+    - RxNimble/RxBlocking (= 5.1.1)
+  - RxNimble/Core (5.1.1):
+    - Nimble (~> 9.0)
+    - RxSwift (~> 6.0)
+  - RxNimble/RxBlocking (5.1.1):
+    - RxBlocking
+    - RxNimble/Core
   - RxRealm (5.0.1):
     - Realm (~> 10.5)
     - RealmSwift (~> 10.5)
@@ -19,37 +31,54 @@ PODS:
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
+  - RxTest (6.1.0):
+    - RxSwift (= 6.1.0)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - Nimble
+  - Quick
   - R.swift
+  - RxBlocking
   - RxCocoa (= 6.1.0)
+  - RxNimble
   - RxRealm
   - RxSwift (= 6.1.0)
+  - RxTest
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - Nimble
+    - Quick
     - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
+    - RxBlocking
     - RxCocoa
+    - RxNimble
     - RxRealm
     - RxRelay
     - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   Realm: f08ce1a85649a41303ecfe1cbd914c62e9e6d710
   RealmSwift: 60ec49d165f23d040ab48811d8dd177e09baf4d3
+  RxBlocking: 602095fba0bce7b16b56ccec89edf780c248b7d9
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxNimble: 80e69e545cd0f54fe7cc747eafe9e14baeca68ca
   RxRealm: bd7c601e78cfebe48c24d4550db83c31e1ab2c33
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxTest: 9d26616eaff4a7e75f4ecae9b2c24840f2e8218d
 
-PODFILE CHECKSUM: f60d409da5e31e6f8b2922e2a3fe7c46666df6b2
+PODFILE CHECKSUM: 648d51722f6d24fe4a78dc27546ff92ac11de253
 
 COCOAPODS: 1.10.1
