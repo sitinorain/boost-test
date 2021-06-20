@@ -1,5 +1,4 @@
-# boost-test
-Test Question for Boost interview
+# Test Question for Boost interview
 
 ### To do
 Please run "pod install" command and open the project from ".xcworkspace"
